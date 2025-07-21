@@ -26,7 +26,7 @@ services:
       - "5888:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin123
+      POSTGRES_PASSWORD: admin321
       POSTGRES_DB: new_employee_db
     volumes:
       - pgdata:/var/lib/postgresql/data

@@ -646,7 +646,7 @@
                     const year = document.getElementById('year').value;
 
                     try {
-                        const response = await fetch('http://98.80.67.100:3018/api/payslips?employeeId=' + employeeId + '&month=' + month + '&year=' + year);
+                        const response = await fetch('http://13.51.162.209:3018/api/payslips?employeeId=' + employeeId + '&month=' + month + '&year=' + year);
                         if (!response.ok) {
                             throw new Error((await response.json()).error || 'Failed to fetch payslip');
                         }
