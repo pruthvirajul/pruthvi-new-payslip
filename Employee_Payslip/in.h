@@ -516,7 +516,7 @@
 
             // Check if page is loaded via file:// protocol
             if (window.location.protocol === 'file:') {
-                showNotification('error', 'This application must be run via the server. Please open http://98.80.67.100:3018/Employee_Payslip instead of the local file.');
+                showNotification('error', 'This application must be run via the server. Please open http://13.61.100.57:3018/Employee_Payslip instead of the local file.');
                 const logoImg = document.querySelector('.company-logo');
                 logoImg.src = 'https://placehold.co/180x100?text=Logo';
                 console.log('Forced placeholder due to file:// protocol:', logoImg.src);
@@ -646,7 +646,7 @@
                     const year = document.getElementById('year').value;
 
                     try {
-                        const response = await fetch('http://13.51.162.209:3018/api/payslips?employeeId=' + employeeId + '&month=' + month + '&year=' + year);
+                        const response = await fetch('http://13.61.100.57:3018/api/payslips?employeeId=' + employeeId + '&month=' + month + '&year=' + year);
                         if (!response.ok) {
                             throw new Error((await response.json()).error || 'Failed to fetch payslip');
                         }
